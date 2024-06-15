@@ -1,4 +1,5 @@
 ## Common
+alias cd='z'
 alias ..='cd ..'
 alias grep='grep --color=auto'
 alias h='history'
@@ -6,13 +7,25 @@ alias hg='history | grep -i $1'
 
 alias s="sudo"
 
+### View
 alias b='bat'
 alias c='cat'
 
+### Source
 alias src='source ~/.bashrc'
-alias vrc='vim ~/.bashrc'
 
+### Vim
+alias vrc='vim ~/.bashrc'
+alias va='vim ~/.bash_aliases'
+
+### PATH
 alias path='echo -e ${PATH//:/\\n}'
+
+### Git
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
 
 ### SSH
 alias gensshkey='user=$(whoami); hostname=$(hostname); ssh-keygen -t ed25519 -C "$user@$hostname"'
