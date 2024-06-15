@@ -26,6 +26,7 @@ alias g='git'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
+alias gp='git push'
 
 ### SSH
 alias gensshkey='user=$(whoami); hostname=$(hostname); ssh-keygen -t ed25519 -C "$user@$hostname"'
