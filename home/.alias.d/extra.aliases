@@ -1,0 +1,2 @@
+# SSH Connections - check .ssh/config
+alias pi='ssh pi'

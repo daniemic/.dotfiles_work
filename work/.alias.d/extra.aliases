@@ -1,6 +1,3 @@
-# Zoxide - replacement for cd
-alias cd='z'
-
 # Available Hosts
 alias ca_hosts='(
 echo "Available hosts:"
