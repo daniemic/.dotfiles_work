@@ -1,7 +1,5 @@
 ## Common
-alias cd='z'
 alias ..='cd ..'
-alias grep='grep --color=auto'
 alias h='history'
 alias hg='history | grep -i $1'
 

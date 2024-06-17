@@ -3,6 +3,26 @@
 ## Description
 Manage configuration files using stow
 
+├── README.md
+├── bash
+│   ├── .bash_aliases
+│   └── .bashrc
+├── home
+│   ├── .alias.d
+│   │   └── extra.aliases
+│   ├── .gitconfig
+│   └── .ssh
+│       └── config
+├── vim
+│   └── .vimrc
+└── work
+    ├── .alias.d
+    │   └── extra.aliases
+    ├── .gitconfig
+    └── .ssh
+        └── config
+
+
 ## Installation
 sudo apt install stow
 
@@ -17,5 +37,11 @@ stow -R <packagename> # restows package
 
 Example
 ```sh
-stow bash git ssh
+# Install config files on home computer
+stow bash home vim
+
+# Install config files on home computer
+stow bash work vim
 ```
+
+## To Do

@@ -72,9 +72,13 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
+# Enable color support for ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    eval "$(dircolors -b)"
+    alias grep='grep --color=auto'
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 fi
 
 # colored GCC warnings and errors
@@ -89,6 +93,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
 # Read extra alias definitions
 if [ -d ~/.alias.d ]; then
     # Include individual alias files from the `.alias.d` directory
@@ -118,4 +123,4 @@ export PS1="\[\e[0;31m\]\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Setup Zoxide
-eval "$(zoxide init bash)"
+eval "$(zoxide init --cmd cd bash)"
